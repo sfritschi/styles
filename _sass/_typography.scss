@@ -33,7 +33,28 @@ h6, .h6 {
 }
 
 h1, .h1 { font-size: $font-size-h1; }
+
+@media only screen and (max-width: $sc-medium) {
+	h1,
+	.h1 {
+		font-size: 24px;
+	}
+}
+
 h2, .h2 { font-size: $font-size-h2; }
+
+@media only screen and (max-width: $sc-medium) {
+	h2,
+	.h2 {
+		font-size: 18px;
+	}
+}
+
+h2#data {
+	margin: 0;
+	padding-bottom: 11px;
+}
+
 h3, .h3 { font-size: $font-size-h3; }
 h4, .h4 { font-size: $font-size-h4; }
 h5, .h5 { font-size: $font-size-h5; }
@@ -42,6 +63,12 @@ h6, .h6 { font-size: $font-size-h6; }
 p {
   margin: 0 0 ($line-height-computed / 2);
   font-size: $font-size;
+}
+
+@media only screen and (max-width: $sc-small) {
+  p {
+	font-size: ($font-size * 0.875);
+  }
 }
 
 a {

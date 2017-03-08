@@ -44,7 +44,8 @@
     float: right;
     padding: 0 $padding-x;
     li{display: inline-block;}
-    a, div, span{
+    a{
+      color: $navbar-top-link-color;
       text-decoration: none;
       font-size: $navbar-top-link-size;
       font-family: $navbar-top-link-font;
@@ -52,9 +53,6 @@
       padding: $navbar-top-link-padding;
       line-height: $navbar-top-link-size;
       font-weight: $navbar-top-link-fontweight;
-    }
-    a{
-      color: $navbar-top-link-color;
 
       &:hover, &:focus, &.active{
         color: $navbar-top-link-hover-color;
@@ -64,7 +62,7 @@
         border-bottom: $navbar-top-link-active-borderbottom;
       }
     }
-    @media (max-width: $sc-medium) {
+    @media (max-width: $sc-medium - 1) {
       display: none;
     }
   }
@@ -160,10 +158,10 @@ $scale: $navbar-top-small-height / $navbar-top-height;
   li a{display: block; width: 100%;}
 }
 #nav-mobile-btn{ min-height: 34px; cursor: pointer;}
-@media (min-width: $sc-medium) {
+@media (min-width: 768px) {
   #nav-mobile-btn{display: none;}
 }
-@media (max-width: $sc-medium) {
+@media (max-width: 768px) {
   #nav-mobile-nav.active{ display: block; }
   #navbar-kl .nav, #mt-nav ul{display: none;}
 }
